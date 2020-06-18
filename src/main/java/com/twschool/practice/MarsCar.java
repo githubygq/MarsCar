@@ -14,6 +14,20 @@ public class MarsCar {
         this.position = position;
     }
 
+    public void moveForward(Position position) {
+        if ("N".equals(position.getDirn())) {
+            position.setY(position.getY() + 1);
+        }
+        if ("S".equals(position.getDirn())) {
+            position.setY(position.getY() - 1);
+        }
+        if ("E".equals(position.getDirn())) {
+            position.setX(position.getX() + 1);
+        }
+        if ("W".equals(position.getDirn())) {
+            position.setX(position.getX() - 1);
+        }
+    }
 
     public MarsCar(Position position) {
         this.position = position;
@@ -33,9 +47,11 @@ public class MarsCar {
     public String move(String commd) {
         List<String> cmd = Arrays.asList(commd.split(""));
         for (String s : cmd) {
-
+            if ("M".equals(s)) {
+                moveForward(position);
+            } else {
                 turn(s);
-
+            }
         }
         return "(" + position.getX() + "," + position.getY() + ")" + position.getDirn();
     }

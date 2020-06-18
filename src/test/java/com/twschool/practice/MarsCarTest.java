@@ -32,4 +32,17 @@ public class MarsCarTest {
         assertEquals("(0,0)E",result);
     }
 
+    @Test
+    public void should_return_01N_when_commend_M_given_00N(){
+        //given
+        Position position = new Position(0,0,"N");
+        MarsCar marsCar = new MarsCar(position);
+
+        String str = "M";
+        //List<String> commd = Arrays.asList(str);
+        //when
+        String result = marsCar.move(str);
+        //then
+        assertEquals("(0,1)N",result);
+    }
 }
