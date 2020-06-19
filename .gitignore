@@ -2,4 +2,9 @@
 build/*
 target/*
 .DS_Store
+<<<<<<< HEAD
 .gradle
+=======
+.gradle
+**/*.iml
+>>>>>>> 5d536dd11c4ce9efcb1735d33f38aeae88a55cc5

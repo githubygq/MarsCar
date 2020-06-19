@@ -15,7 +15,11 @@
     <repositories>
         <repository>
             <id>maven-ali</id>
+<<<<<<< HEAD
             <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+=======
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+>>>>>>> 5d536dd11c4ce9efcb1735d33f38aeae88a55cc5
             <releases>
                 <enabled>true</enabled>
             </releases>

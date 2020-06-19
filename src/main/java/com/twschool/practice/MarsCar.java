@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MarsCar {
-    Position position;
+    Position position ;
 
     public Position getPosition() {
         return position;
@@ -15,22 +15,22 @@ public class MarsCar {
     }
 
     public void moveForward(Position position) {
-        if ("N".equals(position.getDirn())) {
-            position.setY(position.getY() + 1);
+        if("N".equals(position.getDirn())){
+            position.setY(position.getY()+1);
         }
-        if ("S".equals(position.getDirn())) {
-            position.setY(position.getY() - 1);
+        if("S".equals(position.getDirn())){
+            position.setY(position.getY()-1);
         }
-        if ("E".equals(position.getDirn())) {
-            position.setX(position.getX() + 1);
+        if("E".equals(position.getDirn())){
+            position.setX(position.getX()+1);
         }
-        if ("W".equals(position.getDirn())) {
-            position.setX(position.getX() - 1);
+        if("W".equals(position.getDirn())){
+            position.setX(position.getX()-1);
         }
     }
 
-    public MarsCar(Position position) {
-        this.position = position;
+    public MarsCar(Position position){
+        this.position=position;
     }
 
 
@@ -44,7 +44,7 @@ public class MarsCar {
         }
     }
 
-    public String move(String commd) {
+    public String move( String commd) {
         List<String> cmd = Arrays.asList(commd.split(""));
         for (String s : cmd) {
             if ("M".equals(s)) {
@@ -53,21 +53,20 @@ public class MarsCar {
                 turn(s);
             }
         }
-        return "(" + position.getX() + "," + position.getY() + ")" + position.getDirn();
+        return "("+position.getX()+","+position.getY()+")"+position.getDirn();
     }
 }
 
-class Position {
+class Position{
     int x;
     int y;
     String dirn;
 
-    public Position(int x, int y, String dirn) {
-        this.x = x;
-        this.y = y;
-        this.dirn = dirn;
+    public Position(int x,int y,String dirn){
+        this.x=x;
+        this.y=y;
+        this.dirn=dirn;
     }
-
     public int getX() {
         return x;
     }
